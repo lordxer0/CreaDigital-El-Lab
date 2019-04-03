@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    universidad "NN"
+                    Universidad "NN"
                 </div>
 
                 <div class="links">
-                    <a href="#">Ingrese Estudiante</a>
-                    <a href="#">Ingrese Docente</a>
+                    <a href="#">Ingreso Estudiante</a>
+                    <a href="#">Ingreso Docente</a>
                     
                 </div>
             </div>
