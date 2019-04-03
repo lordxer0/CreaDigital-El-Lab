@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Support\Facades\Auth;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,5 +15,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('login');
+})->name('login');
+
+
+Route::post('login','loginController@index')->name('validar');
+
+
+Route::get('principal',function(){
+    Auth::logout();
+    return redirect('login');
+})->name('sesion');
+
+//proteciion de rutas
+
+// Route::group(['middleware' => 'auth'], function(){  //de esta manera protegemos las rutas
+//     Route::resource('peliculas','PeliculaController');
+//     Route::get('inicio','EstudioController@consul')->name('inicio');
+//     Route::get('estudios',function(){
+//         return View('estudios.estudioscrear');
+//     });
+// });
